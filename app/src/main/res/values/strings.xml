@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Strzykawka Gertruda</string>
+    <string name="wprowad_sw_j_adres_e_mail">Wprowadź swój adres e-mail</string>
+    <string name="wprowad_swoje_has_o">Wprowadź swoje hasło</string>
+    <string name="co_to_jest">Co to jest?</string>
+    <string name="pomocy">Pomocy!</string>
+    <string name="ustawienia">USTAWIENIA</string>
+    <string name="zaloguj_mnie">Zaloguj mnie!</string>
 </resources>
