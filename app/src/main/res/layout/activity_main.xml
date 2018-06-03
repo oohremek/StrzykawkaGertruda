@@ -101,13 +101,32 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        android:onClick="fade"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/strzykawkagertruda"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/strzykawkagertruda" />
+
+    <ImageView
+        android:id="@+id/imageViewStrzykawkaGertrudaSloneczko"
+        android:layout_width="346dp"
+        android:layout_height="122dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:contentDescription="TODO"
+        android:src="@drawable/strzykawkagertrudasloneczko"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/strzykawkagertrudasloneczko" />
 
     <Button
         android:id="@+id/buttonSettings"
