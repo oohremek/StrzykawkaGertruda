@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".Menu" />
+        <activity android:name=".AddResults" />
+        <activity android:name=".LoadResults" />
+        <activity android:name=".Visualize"></activity>
     </application>
 
 </manifest>

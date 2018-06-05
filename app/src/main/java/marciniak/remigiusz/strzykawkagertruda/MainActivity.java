@@ -1,5 +1,6 @@
 package marciniak.remigiusz.strzykawkagertruda;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText putPasswordEditText;
     private MediaPlayer mPlayerWitam;
     private Button buttonSettings;
+    private Button buttonLogIn;
 
 
 
@@ -68,26 +70,20 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
     }
-    public void logInClicked(View view){
-
-
-
-        /// if else zeby przy zalogowaniu pokazywalo sie zalogowano
-        Log.i("Username", putEmailEditText.getText().toString());
-     //   Log.i("password", putPasswordEditText.getText().toString());
-
-        Toast.makeText(MainActivity.this,"Zalogowano!",Toast.LENGTH_SHORT).show();
-
-
-    }
+//    public void logInClicked(View view){
+//        /// if else zeby przy zalogowaniu pokazywalo sie zalogowano
+//        Log.i("Username", putEmailEditText.getText().toString());
+//     //   Log.i("password", putPasswordEditText.getText().toString());
+//        Toast.makeText(MainActivity.this,"Zalogowano!",Toast.LENGTH_SHORT).show();
+//
+//
+//    }
 
     public void fade(View view) {
        Log.i("Strzykawka clicked", "strzykawka kliknieta" );
 
        imageViewStrzykawkaGertruda.animate().alpha(0f).setDuration(1000);
        imageViewStrzykawkaGertrudaSloneczko.animate().alpha(1f).setDuration(3000);
-
-
 
     }
 
@@ -108,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //inicjalizacja zmiennych
+
+
         mPlayerCoTo = MediaPlayer.create(this, R.raw.strzykawkacotojest);
         mPlayerPomoc = MediaPlayer.create(this, R.raw.strzykawkapomoc);
 
@@ -131,12 +129,29 @@ public class MainActivity extends AppCompatActivity {
                 openActivitySettings();
             }
         });
+
+        buttonLogIn = (Button)findViewById(R.id.buttonLogin);
+
+        buttonLogIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivityMenu();
+            }
+        });
     }
 
     public void openActivitySettings(){
 
         Intent intent = new Intent(this,Settings.class);
         startActivity(intent);
+    }
+
+    public void openActivityMenu(){
+        Log.i("Username", putEmailEditText.getText().toString());
+        Toast.makeText(MainActivity.this,"Zalogowano!",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,Menu.class);
+        startActivity(intent);
+
     }
 
 }
